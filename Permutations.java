@@ -17,6 +17,8 @@ Challenge
 Do it without recursion
 
 Tags - Recursion
+
+Leetcode - (46) Permutations
 */
 
 
@@ -39,7 +41,7 @@ class Solution {
     }
     
     public void helper(ArrayList<ArrayList<Integer>> rst, ArrayList<Integer> list, ArrayList<Integer> nums){
-        if(list.size() == nums.size()) {
+        if(list.size() == nums.size()) {        // 保证长度一致 -> 保证是permutation而不是子集
             rst.add(new ArrayList<Integer>(list));
             return;
         }
@@ -56,15 +58,3 @@ class Solution {
     }
     
 }
-
-
-
-
-
-
-
-
-/*
-Leetcode - (46) Permutations
-
-*/

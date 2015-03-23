@@ -16,6 +16,8 @@ Challenge
 Do it without recursion.
 
 Tags - Recursion
+
+Leetcode - (47) Permutations II
 */
 
 
@@ -30,6 +32,7 @@ class Solution {
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
         if(nums==null && nums.size()==0)
             return res;
+
         Collections.sort(nums);		// sort first to avoid dups
         helper(nums, new boolean[nums.size()], new ArrayList<Integer>(), res);
         return res;
@@ -45,20 +48,10 @@ class Solution {
             if(!used[i]){
                 used[i] = true;
                 item.add(nums.get(i));
-                helper(nums, used, item, res);
+                helper(nums, used, item, res);      // 长度相同所以不是i+1
                 item.remove(item.size()-1);			// backtracking, remove last element
-                used[i] = false;
+                used[i] = false;       // 记得标记成false表示现在不在使用这个元素
             }
         }
     }
 }
-
-
-
-
-
-
-/*
-Leetcode - (47) Permutations II
-
-*/

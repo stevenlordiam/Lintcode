@@ -43,9 +43,11 @@ class Solution {
     private void subsetsHelper(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> list, ArrayList<Integer> S, int pos) {
         result.add(new ArrayList<Integer>(list));
         for (int i = pos; i < S.size(); i++) {
+
             if ( i != pos && S.get(i) == S.get(i-1)) {    // the only difference with subsets is that here you have to check for dups
                 continue;
             }    
+            
             list.add(S.get(i));
             subsetsHelper(result, list, S, i + 1);
             list.remove(list.size() - 1);
