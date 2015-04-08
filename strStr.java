@@ -22,7 +22,7 @@ Tags - Basic Implementation / String
 Leetcode(28) - Implement strStr
 */
 
-class Solution {
+public class Solution {
     /**
      * Returns a index to the first occurrence of target in source, or -1  if target is not part of source.
      * @param source string to be scanned.
