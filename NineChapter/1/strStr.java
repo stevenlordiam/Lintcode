@@ -12,7 +12,7 @@ public class Solution {
         }
         
         int j;      // define j here or line 47 cannot find j !!!
-        for (int i = 0; i < source.length() - target.length() + 1; i++) {
+        for (int i = 0; i < source.length() - target.length() + 1; i++) {   // REMEMBER + 1 !!!
             for (j = 0; j < target.length(); j++) {
                 if (source.charAt(i+j) != target.charAt(j)) {
                     break;

@@ -41,6 +41,7 @@ class Solution {
     }
     
     public void helper(ArrayList<ArrayList<Integer>> rst, ArrayList<Integer> list, ArrayList<Integer> nums){
+        // 是permutation而不是subset, 所以不用pos
         if(list.size() == nums.size()) {        // 保证长度一致 -> 保证是permutation而不是子集
             rst.add(new ArrayList<Integer>(list));
             return;
