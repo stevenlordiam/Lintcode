@@ -11,7 +11,6 @@ Return
     ["aa","b"],
     ["a","a","b"]
   ]
-Tags - Backtracking
 */
 
 public class Solution {
