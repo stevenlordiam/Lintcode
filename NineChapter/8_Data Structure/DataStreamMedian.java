@@ -55,6 +55,8 @@ public class Solution {
             // element in right half of the array.
             // maxHeap: store smaller values. root(max) value is the largest element
             // in the left half of the array.
+
+            // [maxHeap->median->minHeap]
             int current = nums[i];
 //           {4, 5, 1, 3, 2, 6, 0};
             //  4
