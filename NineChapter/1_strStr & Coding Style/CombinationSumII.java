@@ -1,7 +1,7 @@
 /*
 Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
 
-Each number in C may only be used once in the combination.
+Each number in C may only be used once in the combination. // 同一个元素只能用一次
 
 Note
 All numbers (including target) will be positive integers.
@@ -11,16 +11,10 @@ Example
 For example, given candidate set 10,1,6,7,2,1,5 and target 8,
 
 A solution set is: 
-
 [1,7]
-
 [1,2,5]
-
 [2,6]
-
 [1,1,6]
-
-Tags - Backtracking / Array
 */
 
 public class Solution {
@@ -48,8 +42,8 @@ public class Solution {
             return;
         for(int i=start;i<num.length;i++){
             if(i>start && num[i]==num[i-1]) continue;
-            item.add(num[i]);
-            helper(num,i+1,target-num[i],item,res); 	// I可以重复元素所以是i迭代，II不能重复元素所以是i+1，只有这里不一样
+            item.add(num[i]);                           
+            helper(num,i+1,target-num[i],item,res); 	// I同一元素可用多次所以是从i开始，II同一元素只能用一次所以应该从i+1开始，只有这里不一样
             item.remove(item.size()-1);					// 递归的时候传进去的index应该是当前元素的下一个(以避免重复元素)
         }
     }

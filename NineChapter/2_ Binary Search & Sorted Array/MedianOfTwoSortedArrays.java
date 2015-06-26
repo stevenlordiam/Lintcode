@@ -45,7 +45,8 @@ class Solution {
 		            : Integer.MAX_VALUE; 
 		
 		if (A_key < B_key) {
-			return findKth(A, A_start + k / 2, B, B_start, k - k / 2);
+			return findKth(A, A_start + k / 2, B, B_start, k - k / 2); 	
+			// 若A[k/2] < B[k/2], 则A的前k/2个数都在合并后的数组的前k个, 则A的前k/2 drop, 从A[k/2+1]开始与B比较
 		} else {
 			return findKth(A, A_start, B, B_start + k / 2, k - k / 2);
 		}

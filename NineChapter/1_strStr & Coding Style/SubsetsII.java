@@ -45,7 +45,7 @@ class Solution {
         for (int i = pos; i < S.size(); i++) {
 
             if ( i != pos && S.get(i) == S.get(i-1)) {    // the only difference with subsets is that here you have to check for dups
-                continue;
+                continue;                 // 记得要 i!=pos 不能跳过当前数取下一个一样的数字（只能取第一个数不能取之后重复的数）
             }    
             
             list.add(S.get(i));

@@ -25,7 +25,7 @@ public class Solution {
         }
         
         long product = fastPower(a, b, n / 2);
-        product = (product * product) % b;
+        product = (product * product) % b;          // x^n = (x^(n/2))^2 快速幂 -> O(logn)
         if (n % 2 == 1) {   // if n is odd number, then in recursion n/2 one "a" is omitted, so need to add one more "a" here
             product = (product * a) % b;
         }

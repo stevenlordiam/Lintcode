@@ -123,3 +123,15 @@ public class Solution {
         }
     }
 }
+
+/*
+Steps:
+1. Find the node
+2. Find the maximum node in the left subtree
+3. Replace the node with the maximum node in the left subtree.
+
+Special Cases:
+1. The node doest have a left child.
+2. The maximum node in the left subtree has a left child.
+3. The node is the root of the tree.
+*/
