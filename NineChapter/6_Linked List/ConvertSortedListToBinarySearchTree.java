@@ -18,7 +18,7 @@ public class Solution {
     public TreeNode sortedListToBST(ListNode head) {
         int size;
         current = head;
-        size = getListLength(head);
+        size = getListLength(head); // 每次更新当前的链表长度, 每次从current后面取size这么长的convert成BST
         return sortedListToBSTHelper(size);
     }
 

@@ -22,7 +22,7 @@ public class Solution {
         dummy.next = head;
         head = dummy;
         
-        for (int i = 1; i < m; i++) {
+        for (int i = 1; i < m; i++) {   // 走m-1步找到m之前的点
             if (head == null) {
                 return null;
             }
@@ -33,7 +33,7 @@ public class Solution {
         ListNode mNode = head.next;
         ListNode nNode = mNode, postnNode = mNode.next;
         for (int i = m; i < n; i++) {
-            if (postnNode == null) {
+            if (postnNode == null) {    // check for null
                 return null;
             }
             ListNode temp = postnNode.next;

@@ -19,7 +19,7 @@ All words have the same length.
 All words contain only lowercase alphabetic characters.
 */
 
-public class Solution {
+public class Solution {     // BFS + DFS
     public List<List<String>> findLadders(String start, String end,
             Set<String> dict) {
         List<List<String>> ladders = new ArrayList<List<String>>();
@@ -29,9 +29,9 @@ public class Solution {
         dict.add(start);
         dict.add(end);
  
-        bfs(map, distance, start, end, dict);
+        bfs(map, distance, start, end, dict);           // BFS求每个点到起始节点的距离
         List<String> path = new ArrayList<String>();
-        dfs(ladders, path, end, start, distance, map);
+        dfs(ladders, path, end, start, distance, map);  // DFS求所有可行路径
 
         return ladders;
     }

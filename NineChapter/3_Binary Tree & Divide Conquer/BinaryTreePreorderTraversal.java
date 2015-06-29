@@ -34,13 +34,14 @@ public class Solution { 	// Version 0: Non-Recursion (Recommend)
      */
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
+        // non-recursion的时候要用stack记录回去的路径
         ArrayList<Integer> preorder = new ArrayList<Integer>();
         
         if (root == null) {
             return preorder;
         }
         
-        stack.push(root);
+        stack.push(root); 
         while (!stack.empty()) {
             TreeNode node = stack.pop();
             preorder.add(node.val);

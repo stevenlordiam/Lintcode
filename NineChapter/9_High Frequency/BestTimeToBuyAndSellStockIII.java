@@ -11,7 +11,7 @@ Note
 You may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
 */
 
-public class Solution {
+public class Solution {     // 类似product of array exclude itself, 左右扫两次
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length <= 1) {
             return 0;
@@ -20,7 +20,7 @@ public class Solution {
         int[] left = new int[prices.length];
         int[] right = new int[prices.length];
 
-        // DP from left to right;
+        // DP from left to right; 从左往右一次交易得到的最大获益
         left[0] = 0;
         int min = prices[0];
         for (int i = 1; i < prices.length; i++) {
@@ -28,7 +28,7 @@ public class Solution {
             left[i] = Math.max(left[i - 1], prices[i] - min);
         }
 
-        //DP from right to left;
+        //DP from right to left; 从右往左一次交易得到的最大获益
         right[prices.length - 1] = 0;
         int max = prices[prices.length - 1];
         for (int i = prices.length - 2; i >= 0; i--) {

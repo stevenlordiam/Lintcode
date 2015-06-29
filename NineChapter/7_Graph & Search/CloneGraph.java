@@ -23,7 +23,7 @@ Visually, the graph looks like the following:
          \_/
 */
 
-public class Solution {
+public class Solution { // deep copy 都可以用hashmap
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         if (node == null) {
             return null;

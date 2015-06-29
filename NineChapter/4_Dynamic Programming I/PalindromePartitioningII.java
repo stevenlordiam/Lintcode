@@ -20,7 +20,7 @@ public class Solution {
         return true;
     }
 
-    private boolean[][] getIsPalindrome(String s) {
+    private boolean[][] getIsPalindrome(String s) {         // 预处理, 用O(N^2)空间存储是不是回文串, 节省时间从O(N^3)到O(N^2)
         boolean[][] isPalindrome = new boolean[s.length()][s.length()];
 
         for (int i = 0; i < s.length(); i++) {
@@ -50,7 +50,7 @@ public class Solution {
 
         cut[0] = 0;
         for (int i = 1; i <= s.length(); i++) {
-            cut[i] = Integer.MAX_VALUE;
+            cut[i] = Integer.MAX_VALUE; // 所有一开始都初始成无穷大
             for (int j = 1; j <= i; j++) {
                 if (isPalindrome[i - j][i - 1] && cut[i - j] != Integer.MAX_VALUE) {
                     cut[i] = Math.min(cut[i], cut[i - j] + 1);

@@ -28,10 +28,10 @@ public class Solution {
                 head2 = head2.next;
             }
             tail = tail.next;
-        }
-        if (head1 != null) {
+        } 
+        if (head1 != null) {    // head2已空, head1没空
             tail.next = head1;
-        } else {
+        } else {                // head1已空, head2没空   
             tail.next = head2;
         }
 

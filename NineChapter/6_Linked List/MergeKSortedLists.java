@@ -36,7 +36,7 @@ public class Solution {
             ListNode head = heap.poll();
             tail.next = head;
             tail = head;
-            if (head.next != null) {
+            if (head.next != null) {    // 添加链表中head后面的node到heap中
                 heap.add(head.next);
             }
         }

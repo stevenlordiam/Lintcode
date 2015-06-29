@@ -18,7 +18,7 @@ Challenge
 O(n) time and memory.
 */
 
-public class Solution {
+public class Solution { // 找左边或者右边第一个比自己大的元素用stack，类似largest rectangle
     /**
      * @param A: Given an integer array with no duplicates.
      * @return: The root of max tree.

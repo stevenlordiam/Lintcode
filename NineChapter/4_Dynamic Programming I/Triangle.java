@@ -27,10 +27,10 @@ public class Solution {     // Bottom-Up
         int[][] sum = new int[n][n];
 
         for (int i = 0; i < n; i++) {
-            sum[n - 1][i] = triangle.get(n - 1).get(i);     // 最后一行元素
+            sum[n - 1][i] = triangle.get(n - 1).get(i);     // 初始化，最后一行元素
         }
 
-        for (int i = n - 2; i >= 0; i--) { 
+        for (int i = n - 2; i >= 0; i--) {  // 自底向上
             for (int j = 0; j <= i; j++) {
                 sum[i][j] = Math.min(sum[i + 1][j], sum[i + 1][j + 1]) + triangle.get(i).get(j);
             }

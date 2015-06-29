@@ -8,7 +8,8 @@ Could you solve it with O(1) space?
 */
 
 //HashMap version
-public class Solution {
+public class Solution { // deep copy 都可以用hashmap, O(N) space
+    // key: old node, value: new node
     public RandomListNode copyRandomList(RandomListNode head) {
         if (head == null) {
             return null;
@@ -44,7 +45,7 @@ public class Solution {
 }
 
 //No HashMap version
-public class Solution {
+public class Solution {     // 映射关系用next完成
     private void copyNext(RandomListNode head) {
         while (head != null) {
             RandomListNode newNode = new RandomListNode(head.label);

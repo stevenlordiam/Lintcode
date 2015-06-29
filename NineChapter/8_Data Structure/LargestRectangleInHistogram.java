@@ -15,7 +15,7 @@ Given height = [2,1,5,6,2,3],
 return 10.
 */
 
-public class Solution {
+public class Solution { // 找左边或者右边第一个比自己小的元素用stack
     public int largestRectangleArea(int[] height) {
         if (height == null || height.length == 0) {
             return 0;

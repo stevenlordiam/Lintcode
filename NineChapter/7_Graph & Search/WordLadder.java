@@ -18,7 +18,7 @@ All words have the same length.
 All words contain only lowercase alphabetic characters.
 */
 
-public class Solution {
+public class Solution {     // BFS 求最短路径
     public int ladderLength(String start, String end, Set<String> dict) {
         if (dict == null || dict.size() == 0) {
             return 0;

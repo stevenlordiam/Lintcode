@@ -15,7 +15,7 @@ Challenge
 O(n) time.
 */
 
-public class Solution {
+public class Solution { // O(N)
     /**
      * @param nums: A list of integers.
      * @return: An integer denotes the middle number of the array.
@@ -50,3 +50,5 @@ public class Solution {
         }
     }
 }
+
+// 也可以用heap实现

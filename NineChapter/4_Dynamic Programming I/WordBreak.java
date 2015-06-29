@@ -8,7 +8,7 @@ Given s = "lintcode", dict = ["lint", "code"].
 Return true because "lintcode" can be break as "lint code".
 */
 
-public class Solution {
+public class Solution {     // O(NL), N-字符串长度, L-最长单词长度
     private int getMaxLength(Set<String> dict) {
         int maxLength = 0;
         for (String word : dict) {
@@ -28,7 +28,7 @@ public class Solution {
         canSegment[0] = true;
         for (int i = 1; i <= s.length(); i++) {
             canSegment[i] = false;
-            for (int j = 1; j <= maxLength && j <= i; j++) {
+            for (int j = 1; j <= maxLength && j <= i; j++) {    // 枚举单词长度而不是切分位置
                 if (!canSegment[i - j]) {
                     continue;
                 }

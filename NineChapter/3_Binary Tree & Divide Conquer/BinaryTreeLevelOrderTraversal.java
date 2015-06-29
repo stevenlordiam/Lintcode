@@ -36,7 +36,7 @@ Using only 1 queue to implement it.
  */
 
 public class Solution {
-    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
+    public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {    // one queue
         ArrayList result = new ArrayList();
 
         if (root == null) {

@@ -17,11 +17,11 @@ public class Solution {
 
         sum[0][0] = grid[0][0];
 
-        for (int i = 1; i < M; i++) {
+        for (int i = 1; i < M; i++) {   // 初始化第一列
             sum[i][0] = sum[i - 1][0] + grid[i][0];
         }
 
-        for (int i = 1; i < N; i++) {
+        for (int i = 1; i < N; i++) {   // 初始化第一行
             sum[0][i] = sum[0][i - 1] + grid[0][i];
         }
 

@@ -24,10 +24,10 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
  * } 
  */
 public class Solution {
-    private Stack<TreeNode> stack = new Stack<>();
+    private Stack<TreeNode> stack = new Stack<>();  // 非递归要记得用stack
+    // stack存还没有被遍历的点
     private TreeNode curt;
     
-    // @param root: The root of binary tree.
     public Solution(TreeNode root) {
         curt = root;
     }
@@ -39,14 +39,14 @@ public class Solution {
     
     //@return: return next node
     public TreeNode next() {        // inorder traversal
-        while (curt != null) {
+        while (curt != null) {      // 走到最左
             stack.push(curt);
             curt = curt.left;
         }
         
         curt = stack.pop();
         TreeNode node = curt;
-        curt = curt.right;
+        curt = curt.right;          // 走到右边的下一个点
         
         return node;
     }

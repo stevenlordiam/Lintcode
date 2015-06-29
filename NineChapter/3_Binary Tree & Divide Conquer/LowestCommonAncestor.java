@@ -19,7 +19,7 @@ LCA(6, 7) = 7
 */
 
 Version 1: Traditional Method
-
+// with parent node
 public class Solution {
     private ArrayList<TreeNode> getPath2Root(TreeNode node) {
         ArrayList<TreeNode> list = new ArrayList<TreeNode>();
@@ -44,6 +44,7 @@ public class Solution {
 }
 
 Version 2: Divide & Conquer
+// without parent node
 // if given root, we don't need parent node here
 public class Solution {
     public TreeNode lowestCommonAncestor(TreeNode node1, TreeNode node2) {

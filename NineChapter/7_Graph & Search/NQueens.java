@@ -22,7 +22,7 @@ Challenge
 Can you do it without recursion?
 */
 
-public class Solution {
+public class Solution {     // O(N!)
     private String[] drawChessboard(ArrayList<Integer> cols) {      // cols - 在第i行，把queen放在了result位置上
         String[] chessboard = new String[cols.size()];
         for (int i = 0; i < cols.size(); i++) {

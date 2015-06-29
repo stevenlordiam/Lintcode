@@ -31,7 +31,7 @@ Can you do it in both BFS and DFS?
  *     DirectedGraphNode(int x) { label = x; neighbors = new ArrayList<DirectedGraphNode>(); }
  * };
  */
-public class Solution {
+public class Solution {     
     /**
      * @param graph: A list of Directed graph node
      * @return: Any topological order for the given graph.
@@ -40,7 +40,7 @@ public class Solution {
         // write your code here
         ArrayList<DirectedGraphNode> result = new ArrayList<DirectedGraphNode>();
         HashMap<DirectedGraphNode, Integer> map = new HashMap();
-        for (DirectedGraphNode node : graph) {
+        for (DirectedGraphNode node : graph) {  // store the degree of node
             for (DirectedGraphNode neighbor : node.neighbors) {
                 if (map.containsKey(neighbor)) {
                     map.put(neighbor, map.get(neighbor) + 1);
@@ -49,8 +49,8 @@ public class Solution {
                 }
             }
         }
-        Queue<DirectedGraphNode> q = new LinkedList<DirectedGraphNode>();
-        for (DirectedGraphNode node : graph) {
+        Queue<DirectedGraphNode> q = new LinkedList<DirectedGraphNode>();   // BFS
+        for (DirectedGraphNode node : graph) {  // 取出最开始的元素degree=0的node没有在map中
             if (!map.containsKey(node)) {
                 q.offer(node);
                 result.add(node);
@@ -59,7 +59,7 @@ public class Solution {
         while (!q.isEmpty()) {
             DirectedGraphNode node = q.poll();
             for (DirectedGraphNode n : node.neighbors) {
-                map.put(n, map.get(n) - 1);
+                map.put(n, map.get(n) - 1); // delete edge, degree minus one
                 if (map.get(n) == 0) {
                     result.add(n);
                     q.offer(n);

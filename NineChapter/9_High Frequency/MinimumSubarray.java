@@ -11,7 +11,7 @@ Note
 The subarray should contain at least one integer.
 */
 
-public class Solution {
+public class Solution {     // 把所有数取反就变成了maximum subarray
     /**
      * @param nums: a list of integers
      * @return: A integer indicate the sum of minimum subarray

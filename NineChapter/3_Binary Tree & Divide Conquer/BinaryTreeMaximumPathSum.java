@@ -43,10 +43,10 @@ public class Solution {
 
         // Conquer
         int singlePath = Math.max(left.singlePath, right.singlePath) + root.val;
-        singlePath = Math.max(singlePath, 0);
+        singlePath = Math.max(singlePath, 0);   // singlePath可以一个点都不取
 
         int maxPath = Math.max(left.maxPath, right.maxPath);
-        maxPath = Math.max(maxPath, left.singlePath + right.singlePath + root.val);
+        maxPath = Math.max(maxPath, left.singlePath + right.singlePath + root.val);     // maxPath至少要取一个点
 
         return new ResultType(singlePath, maxPath);
     }

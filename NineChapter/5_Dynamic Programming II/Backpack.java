@@ -23,21 +23,22 @@ public class Solution {
      * @return: The maximum size
      */
     public int backPack(int m, int[] A) {
-        boolean f[][] = new boolean[A.length + 1][m + 1];   //  “前i”个数,取出一些能否组成和为j
+        boolean f[][] = new boolean[A.length + 1][m + 1];       //  “前i”个数,取出一些能否组成和为j
         for (int i = 0; i <= A.length; i++) {
-            for (int j = 0; j <= m; j++) {
-                f[i][j] = false;
-            }
+            f[i][0] = true;
         }
-        f[0][0] = true;
+        for (int j = 1; j <= m; j++) {
+                f[0][j] = false;
+        }
+
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j <= m; j++) {
                 f[i + 1][j] = f[i][j];
-                if (j >= A[i] && f[i][j - A[i]]) {
+                if (j >= A[i] && f[i][j - A[i]]) {      // 保证j-A[i]不是负数
                     f[i + 1][j] = true;
                 }
-            } // for j
-        } // for i
+            } 
+        } 
         
         for (int i = m; i >= 0; i--) {      // max size
             if (f[A.length][i]) {
