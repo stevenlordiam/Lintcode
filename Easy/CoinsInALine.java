@@ -3,7 +3,6 @@ There are n coins in a line. Two players take turns to take one or two coins fro
 
 Could you please decide the first play will win or lose?
 
-Have you met this question in a real interview? Yes
 Example
 n = 1, return true.
 
