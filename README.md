@@ -1,7 +1,7 @@
 ###Lintcode
 ==========
 
-My solutions to Lintcode Online Judge
+My solutions to Lintcode Online Judge in Java
 
 Some useful website:
 
