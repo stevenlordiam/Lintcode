@@ -9,19 +9,14 @@ public class Quicksort {
 	public static int partition(int arr[], int left, int right) {
 		int pivot = arr[(left + right) / 2]; // Pick a pivot point. Can be an element.
 		
-		while (left <= right) { // Until we've gone through the whole array
-			// Find element on left that should be on right
+		while (left <= right) { 	// Until we've gone through the whole array. Find element on left that should be on right
 			while (arr[left] < pivot) { 
 				left++;
 			}
-			
-			// Find element on right that should be on left
-			while (arr[right] > pivot) {
+			while (arr[right] > pivot) {	// Find element on right that should be on left
 				right--;
 			}
-			
-			// Swap elements, and move left and right indices
-			if (left <= right) {
+			if (left <= right) {		// Swap elements, and move left and right indices
 				swap(arr, left, right);
 				left++;
 				right--;
@@ -46,5 +41,4 @@ public class Quicksort {
 		quickSort(arr, 0, arr.length - 1);
 		System.out.println(Arrays.toString(arr));
 	}
-
 }
