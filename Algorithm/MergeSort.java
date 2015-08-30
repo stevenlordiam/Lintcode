@@ -1,3 +1,9 @@
+/*
+Best:    O(n log n)
+Average: O(n log n)
+Worst:   O(n log n)
+*/
+
 import java.util.*;
 
 public class MergeSort {	
@@ -50,5 +56,6 @@ public class MergeSort {
 		mergesort(array);
 		System.out.println(Arrays.toString(array));
 	}
-
 }
+
+// https://youtu.be/EeQ8pwjQxTM

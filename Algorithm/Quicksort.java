@@ -1,4 +1,11 @@
+/*
+Best: 	 O(n log n)
+Average: O(n log n)
+Worst:   O(n^2)
+*/
+
 import java.util.*;
+
 public class Quicksort {
 	public static void swap(int[] array, int i, int j) {
 		int tmp = array[i];
@@ -42,3 +49,5 @@ public class Quicksort {
 		System.out.println(Arrays.toString(arr));
 	}
 }
+
+// https://youtu.be/aQiWF4E8flQ

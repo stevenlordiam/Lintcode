@@ -1,3 +1,9 @@
+/*
+Best: 	 O(n)
+Average: O(n^2)
+Worst:   O(n^2)
+*/
+
 import java.util.*;
 
 public class InsertionSort {	 		 
@@ -20,3 +26,5 @@ public class InsertionSort {
 		System.out.println(Arrays.toString(arr));
 	}
 }
+
+// https://youtu.be/DFG-XuyPYUQ
