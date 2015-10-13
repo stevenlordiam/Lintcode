@@ -1,6 +1,12 @@
 ###Lintcode
 ==========
 
+* Notice
+
+**No longer maintaining this repo**
+
+---------------------------------------
+
 My solutions to Lintcode Online Judge in Java
 
 Some useful website:
